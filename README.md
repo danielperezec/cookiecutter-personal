@@ -1,33 +1,41 @@
-# cookiecutter testing 
+# Cookiecuter Personal Platzi
 
-By: danielperezec.
+<!-- badges: start -->
+[![@jvelzmagic](https://img.shields.io/badge/@jvelezmagic-Sitio_personal-blue?&logoColor=white)](https://jvelezmagic.com/) 
+[![Platzi](https://img.shields.io/badge/Curso_Platzi-Configuración_Avanzada_...-green&logoColor=white)](https://platzi.com/datos/)
+<!-- badges: end -->
 
-Version: 0.1.0
+Aprende a crear tu propia plantilla personalizada utilizando cookiecutter.
 
-prueba
+## Requiremientos
 
-## Prerequisites
+- [Anaconda](https://www.anaconda.com/download/) >= 4.x
+- [git](https://git-scm.com/) >= 2.x
+- [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0:
+    Esto puede ser instalado con `pip` o `conda` dependiendo cómo tú manejas tus paquetes de Python:
 
-- [Anaconda](https://www.anaconda.com/download/) >=4.x
-- Optional [Mamba](https://mamba.readthedocs.io/en/latest/)
-
-## Create environment
-
-```bash
-conda env create -f environment.yml
-activate cookiecutter_testing
+``` bash
+pip install cookiecutter
 ```
 
-or 
+o
 
-```bash
-mamba env create -f environment.yml
-activate cookiecutter_testing
+``` bash
+conda install -c conda-forge cookiecutter
 ```
 
-## Project organization
+## Crear un nuevo proyecto
 
-    cookiecutter_testing
+En el directorio en el que quieras guardar tu proyecto generado:
+
+```bash
+cookiecutter https://github.com/platzi/curso-entorno-avanzado-ds --checkout cookiecutter-personal-platzi
+```
+
+
+## Estructura de directorios y archivos resultantes
+
+    {{ cookiecutter.project_slug }}
         ├── data
         │   ├── processed      <- The final, canonical data sets for modeling.
         │   └── raw            <- The original, immutable data dump.
@@ -43,4 +51,4 @@ activate cookiecutter_testing
         └── README.md          <- The top-level README for developers using this project.
 
 ---
-Project created for demonstration purposes for the course "[Personalización Avanzada de Entorno para ciencia de Datos]()" by [Platzi](https://platzi.com/) - [@jvelezmagic](https://jvelezmagic.com/).
+Proyecto creado con fines demostrativos para el curso "[Configuración avanzada...]()" de [Platzi](https://platzi.com/) por [@jvelezmagic](https://twitter.com/jvelezmagic).
