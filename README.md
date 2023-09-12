@@ -1,54 +1,61 @@
-# Cookiecuter Personal Platzi
+# Project Data Science
 
-<!-- badges: start -->
-[![@jvelzmagic](https://img.shields.io/badge/@jvelezmagic-Sitio_personal-blue?&logoColor=white)](https://jvelezmagic.com/) 
-[![Platzi](https://img.shields.io/badge/Curso_Platzi-Configuración_Avanzada_...-green&logoColor=white)](https://platzi.com/datos/)
-<!-- badges: end -->
+A short description of the project.
+  
+## Installation guide
 
-Aprende a crear tu propia plantilla personalizada utilizando cookiecutter.
+Please read [install.md](install.md) for details on how to set up this project.
 
-## Requiremientos
+## Project Organization
 
-- [Anaconda](https://www.anaconda.com/download/) >= 4.x
-- [git](https://git-scm.com/) >= 2.x
-- [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0:
-    Esto puede ser instalado con `pip` o `conda` dependiendo cómo tú manejas tus paquetes de Python:
-
-``` bash
-pip install cookiecutter
-```
-
-o
-
-``` bash
-conda install -c conda-forge cookiecutter
-```
-
-## Crear un nuevo proyecto
-
-En el directorio en el que quieras guardar tu proyecto generado:
-
-```bash
-cookiecutter https://github.com/platzi/curso-entorno-avanzado-ds --checkout cookiecutter-personal-platzi
-```
-
-
-## Estructura de directorios y archivos resultantes
-
-    {{ cookiecutter.project_slug }}
-        ├── data
-        │   ├── processed      <- The final, canonical data sets for modeling.
-        │   └── raw            <- The original, immutable data dump.
+    ├── LICENSE
+    ├── tasks.py           <- Invoke with commands like `notebook`.
+    ├── README.md          <- The top-level README for developers using this project.
+    ├── install.md         <- Detailed instructions to set up this project.
+    ├── data
+    │   ├── external       <- Data from third party sources.
+    │   ├── interim        <- Intermediate data that has been transformed.
+    │   ├── processed      <- The final, canonical data sets for modeling.
+    │   └── raw            <- The original, immutable data dump.
+    │
+    ├── models             <- Trained and serialized models, model predictions, or model summaries.
+    │
+    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+    │                         the creator's initials, and a short `-` delimited description, e.g.
+    │                         `1.0-jqp-initial-data-exploration`.
+    │
+    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    │
+    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+    │   └── figures         <- Generated graphics and figures to be used in reporting.
+    │
+    ├── environment.yml    <- The requirements file for reproducing the analysis environment.
+    │
+    ├── .here              <- File that will stop the search if none of the other criteria
+    │                         apply when searching head of project.
+    │
+    ├── setup.py           <- Makes project pip installable (pip install -e .)
+    │                         so project_data_science can be imported.
+    │
+    └── project_data_science               <- Source code for use in this project.
+        ├── __init__.py    <- Makes project_data_science a Python module.
         │
-        ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-        │                         the creator's initials, and a short `-` delimited description, e.g.
-        │                         `1.0-jvelezmagic-initial-data-exploration`.
+        ├── data           <- Scripts to download or generate data.
+        │   └── make_dataset.py
         │
-        ├── .gitignore         <- Files to ignore by `git`.
+        ├── features       <- Scripts to turn raw data into features for modeling.
+        │   └── build_features.py
         │
-        ├── environment.yml    <- The requirements file for reproducing the analysis environment.
+        ├── models         <- Scripts to train models and then use trained models to make
+        │   │                 predictions.
+        │   ├── predict_model.py
+        │   └── train_model.py
         │
-        └── README.md          <- The top-level README for developers using this project.
+        ├── utils          <- Scripts to help with common tasks.
+            └── paths.py   <- Helper functions to relative file referencing across project.
+        │
+        └── visualization  <- Scripts to create exploratory and results oriented visualizations.
+            └── visualize.py
 
 ---
-Proyecto creado con fines demostrativos para el curso "[Configuración avanzada...]()" de [Platzi](https://platzi.com/) por [@jvelezmagic](https://twitter.com/jvelezmagic).
+Project based on the [cookiecutter conda data science project template](https://github.com/jvelezmagic/cookiecutter-conda-data-science).

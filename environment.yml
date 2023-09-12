@@ -1,8 +1,23 @@
 # conda env create --file environment.yml
-name: cookiecutter-personal-platzi
+# mamba env create --file environment.yml
+name: project_data_science
 channels:
   - anaconda
   - conda-forge
   - defaults
 dependencies:
-  - cookiecutter
+  - black
+  - invoke
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - nbdime
+  - numpy
+  - pandas
+  - pip
+  - plotly
+  - pyjanitor
+  - pyprojroot
+  - python=3.9
+  - seaborn
+  
